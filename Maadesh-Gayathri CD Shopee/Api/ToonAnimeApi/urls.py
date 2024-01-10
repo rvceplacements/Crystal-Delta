@@ -3,10 +3,10 @@ from ToonAnimeApi import views
 
 
 urlpatterns=[
-    path('',views.home,name='home'),
+    path('home',views.home,name='home'),
     path('explore',views.explore,name='explore'),
     path('signup',views.createAccount,name='signup'),
-    path('login',views.login,name='log'),
+    path('',views.login,name='log'),
    
 
 ]

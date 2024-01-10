@@ -17,22 +17,11 @@
 
 <script>
   function login() {
-    // let name = document.getElementById("uname").value; // Corrected ID
-    // let pwd = document.getElementById("psw").value; // Corrected ID
-
-    // if (name === '' || pwd === '') {
-    //   alert("Please enter both User ID and Password");
-    // } else {
-    //   window.location.href = "home.html";
-    // }
+    
     let emailPhone = document.getElementById("uname").value; // Corrected ID
     let pwd = document.getElementById("psw").value; // Corrected ID
     console.log(pwd,emailPhone)
-    // if (name === '' || pwd === '') {
-    //   alert("Please enter both User ID and Password");
-    // } else {
-    //   
-    // }
+   
     let email,phone
     const reg = new RegExp('^[0-9]+$');
     console.log(reg.test(emailPhone))
@@ -43,18 +32,14 @@
      
     }
     else{
-      alert("email")
+      
      email=emailPhone
      phone=" "
     }
-    // if (name === '' || pwd === '') {
-    //   alert("Please enter both User ID and Password");
-    // } else {
-    //   window.location.href = "index1.html";
-    // }
+   
     $.ajax({
   method: "POST",
-  url: "http://127.0.0.1:8000/login",
+  url: "http://127.0.0.1:8000",
   data:  {
         
         "emailID":email,
@@ -69,7 +54,7 @@
    switch (msg) { 
     case "success":
     window.location.href = "{% url 'home' %}";
-   // alert( "Data Saved: " + msg );
+   
       break;
     case "wrongPassword":
     document.getElementById('password').innerHTML="Incorrect password"
@@ -84,19 +69,6 @@
       break;
    }
 
-    // if(msg=="success"){
-    //   alert( "Data Saved: " + msg );
-    // }
-    // else{
-    //   if( msg=="wrongPassword"){
-    //     document.getElementById('password').innerHTML="Incorrect password"
-    //     alert( "Data Saved: " + msg );
-    //   }
-    //   else
-      
-    // }
-  
-    //window.location.href = "{% url 'log' %}";
   });
   }
 </script>
@@ -114,7 +86,7 @@
         </div>
         <div class="col-lg-6 col-md-6 col-12">
           <div>
-            <button class="exp" type="button"><a href="#" ></a>explore</button>
+           <button class="exp" type="button" onclick="alert('You need to login')">explore</button>
             <a href="{% url 'signup' %}"><button class="exp" type="button">signup</button></a>
           </div>
           <form>
