@@ -1,0 +1,42 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Application</title>
+    
+    <!--linking Section-->
+    <link rel="icon" type="image/x-icon" href="logo1.png">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="log.js"></script>
+</head>
+
+<!--body of the content-->
+
+<body>
+  <div class="nav">
+    <img src="logo1.png" alt="Logo"><br><p style="color: white;">CRYSTALDELTA</p></div>
+   <div class="container">
+    <div class="text">
+      <h1 style="font-size: 60px; color: whitesmoke;">Welcome To <span style="color: orange;">CrystalDelta</span><br>Banking</h1>
+    </div>
+
+    <!--Login Section-->
+
+      <div class="form">
+        <p style="text-align: center;font-size: 30px;">Login to your Account</p><br><br><br>
+        <label for="uname">Customer ID</label><br><br><div id="error"></div>
+        <input type="text" id="username" name="username" placeholder="Enter Your ID" required autocomplete="off">
+        <br><br>
+        <label for="psw">Password</label><br><br><div id="error1"></div>
+        <input type="password" id="password" name="password" placeholder="Enter Your password" required autocomplete="off">
+        <br><br><br>
+        <button type="submit" class="btn" value="login" onclick="login()" >Login</button>
+      </div>
+    </div>
+
+  <!--End of the Code-->
+
+</body>
+</html> 

@@ -1,0 +1,372 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+
+    background-image: url(bank.jpg);
+  
+    height: 100%;
+    width: 100%;
+
+}
+.nav{
+  height: 80px;
+  width: 100%;
+  background-color: #0c789998;
+  display: flex;
+  justify-content: space-between;
+}
+img{
+  height: 50px;
+  width: 50px;
+  padding: 20px;
+}
+.box{
+  width: 100px;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(0, 102, 255);
+  color: whitesmoke;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 102, 255);
+  float: right;
+  margin-top: 20px;
+  margin-right: 50px;
+}
+.box a{
+  text-decoration: none;
+  display: block;
+  color: white;
+  font-size: 15px;
+}
+.box:hover{
+    background-color: rgb(0, 153, 255);
+}
+.box1{
+  width: 150px;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(0, 102, 255);
+  color: whitesmoke;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 102, 255);
+  float: right;
+  margin-right: 10px;
+}
+
+.box1:hover{
+    background-color: rgb(0, 153, 255);
+}
+
+.Account-details{
+   justify-content: space-between;
+   display: flex;
+}
+.tab {
+    float: left;
+    background-color: rgba(48, 46, 46, 0.644);
+    border-right: 4px solid orangered;
+    width: 30%;
+    height: 400px;
+    margin-top: 20px;
+  }
+.tab button {
+    display: block;
+    background-color: rgb(68, 65, 65);
+    color: black;
+    font-size: 20px;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+  }
+  .tab button:hover {
+    background-color: #fff;
+    color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.658), 0 6px 20px 0 rgba(0, 0, 0, 0.637);
+  }
+ .tab button.active {
+    background-color: #fff;
+    border-right: 4px solid orangered;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+ .tabcontent {
+    float: right;
+    padding: 0px 12px;
+    width: 70%;
+    border-left: none;
+    height: 300px;
+    display: none;
+  }
+.box3{
+    width: 70px;
+    height: 70px;
+    margin-left: 20px;
+    margin-top: 20px;
+    float: left;
+    background-image: url("logo1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sidebar{
+    height: 100%;
+    width: 200px;
+    background-color: rgb(116, 111, 111);
+    color: white;
+    z-index: 1;
+    position: fixed;
+    margin-top: 80px;
+}
+
+.sidebar a {
+padding: 6px 8px 6px 16px;
+text-decoration: none;
+font-size: 20px;
+color: rgb(214, 214, 214);
+display: block;
+top: 0;
+left: 0;
+padding-top: 16px;
+}
+.sidebar a:hover{
+    background-color: #585151;
+    color: white;
+   font-size: 23px;
+}
+.dropbtn {
+    background-color: #ece3eeb6;
+    border-right: 3px solid orangered;
+    box-shadow: 0 4px 8px 0 rgba(62, 68, 12, 0.603), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    width: 100%;
+    height: 60px;
+  }
+  .dropbtn:hover{
+    box-shadow: 0 0px 15px 0 rgba(231, 248, 77, 0.678), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .dropdown {
+    position: relative;
+   
+  }
+ .dropdown-content {
+    justify-content: space-between;
+    display: none;
+    background-color: #141414af;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 10px;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: flex;}
+  
+  .dropdown:hover .dropbtn {background-color: #dad6f1;}
+  
+  #Account{
+    border: 1px solid whitesmoke;
+    color: white;
+    background-color: black;
+    margin-left: 310px;
+    width: 300px;
+    height: 40px;
+    
+  }
+  #BeneficiaryAccount{
+    border: 1px solid whitesmoke;
+    color: white;
+    background-color: black;
+    margin-left: 310px;
+    width: 300px;
+    height: 40px;
+    
+  }
+  
+  #rupees{
+    border: 1px solid whitesmoke;
+    color: white;
+    background-color: black;
+    margin-left: 315px;
+    width: 300px;
+    height: 40px;
+    padding: 5px;
+  }
+ 
+  #textarea{
+    border: 1px solid whitesmoke;
+    color: white;
+    background-color: black;
+    margin-left: 380px;
+    width: 300px;
+    height: 80px;
+    padding: 5px;
+  }
+ 
+  .button{
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  #send{
+    margin-right: 500px;
+  }
+  #reset{
+    margin-left: 250px;
+  }
+  .popup-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Adjust the alpha value for the background color */
+    z-index: 999; /* Higher z-index to cover other elements */
+  }
+  
+  .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 480px;
+    z-index: 1000; /* Higher z-index than background */
+  }
+  
+  .popup-content {
+    position: relative;
+  }
+  
+  .close {
+    position: fixed;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    width: 30px;
+    height: 27px;
+    text-align: center;
+  }
+  .close:hover{
+    background-color: red;
+    color: white;
+  }
+  table{
+    
+    margin-top: 30px;
+    border: 1px solid rgb(168, 163, 163) ;
+    text-align: center;
+  }
+  thead{
+    border: 1px solid rgb(75, 73, 73);
+    background-color: #9c9797;
+  }
+  th,td{
+    padding: 10px;
+    text-align: center;
+  }
+    
+
+  #reset{
+    width: 100px;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(0, 102, 255);
+    color: whitesmoke;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 102, 255);
+    margin-left: 100px;
+  }
+  #send{
+    width: 100px;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(0, 102, 255);
+    color: whitesmoke;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 102, 255);
+    float: right;
+    margin-left: 30px;
+  }
+  .a{
+    color: white;
+  }
+p {
+    font-size: 20px;
+  margin-left: 50px;
+}
+.pbox a {
+    display: inline-block;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 3px;
+}
+.modal {
+    align-items: center;
+    display: flex;
+    justify-content: center; 
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(22, 19, 19, 0.705);
+    transition: all 0.4s;
+    visibility: hidden;
+    opacity: 0;
+}
+.contentpop {
+    position: absolute;
+    background: white;
+    width: 400px;
+    padding: 1em 2em;
+    border-radius: 4px;
+} 
+.modal:target {
+    visibility: visible;
+    opacity: 1;
+}
+.box-close {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    color: #fe0606;
+    text-decoration: none;
+    font-size: 30px;
+}
+.send a{
+  text-decoration: none;
+  color: white;
+}
+.click{
+  margin-left: 100px;
+  margin-bottom: 50px;
+  height: 100px;
+  width: 100px;
+}
