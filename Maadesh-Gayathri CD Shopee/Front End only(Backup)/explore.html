@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore</title>
+    <link rel="stylesheet" href="explore.css">
+    <script src='explore.js'></script> 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'></link> 
+    <!--<link rel='stylesheet' type='text/css' media='screen' href='explore.css'>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="container">
+    <div class="topnav">
+        <a href="login.html">Logout</a>
+        <a href="explore.html" class="active">Explore</a>
+        <a href="home.html">Home</a>
+        <img src="logo1.png" class="split">
+      </div>
+    <div class="topnav1" id="myTopnav">
+  <div class="search-container">
+    <input type="text" placeholder="Search Products.." name="search">
+   </div>
+   <div class="sort">
+  <label for="cars" style="color: rgb(114, 110, 110);">Filter By:</label>
+  <select name="cars" id="cars" class="select">
+    <option value="All Categories" class="products">All Categories</option>
+    <option value="saab" class="products">Watch</option>
+    <option value="Shoes" class="products">Shoes</option>
+    <option value="Shirts" class="products">Shirts</option>
+    <option value="Phants" class="products">Phants</option>
+    <option value="Glass" class="products">Glass</option>
+    <option value="Belt" class="products">Belt</option>
+  </select></div>
+  <div class="sort">
+ <label for="cars" style="color: rgb(114, 110, 110);">Sort by:</label>
+  <select name="cars" id="cars" class="select">
+    <option value="All Categories" class="products">All Categories</option>
+    <option value="saab" class="products">Watch</option>
+    <option value="Shoes" class="products">Shoes</option>
+    <option value="Shirts" class="products">Shirts</option>
+    <option value="Phants" class="products">Phants</option>
+    <option value="Glass" class="products">Glass</option>
+    <option value="Belt" class="products">Belt</option>
+  </select> </div>
+  
+  <div><i class="fa fa-shopping-cart" style="font-size:30px"></i><button id="card-btn" onclick="showDetails()">0</button></div>
+</div>     
+  <!---Popup Section-->
+  
+<!-- Second Popup -->
+
+  <br><br>
+  <div class="slider">
+    <div class="card">
+     <img src="bag.jpg" alt="image" ><br><h5 style="padding: 10px;">Gucci leather bags</h5>
+     <p style="color: orangered;padding: 10px;">Flat 20% off*</p>
+     <div class="cart">
+      <button class="add" style="margin-left: 10px;"><a onclick="fun('watches/bag.jpg,1500')">Add to cart</a></button>
+        <button class="add" style="margin-right: 10px;" >Buy Now</button>
+     </div>
+    </div>
+    <div class="card">
+     <img src="louis.jpg" alt="image" ><br><h5 style="padding: 10px;">Louis Vuitton Sunglass</h5>
+     <p style="color: orangered;padding: 10px;">Buy 2, get one flat 50%</p>
+     <div class="cart">
+      <button class="add" style="margin-left: 10px;"><a onclick="fun('watches/louis.jpg,1500')">Add to cart</a></button>
+        <button class="add" style="margin-right: 10px;">Buy Now</button>
+     </div>
+    </div>
+    <div class="card">
+     <img src="fastrack.jpg" alt="image" ><br><h5 style="padding: 10px;">Fastrack Watch</h5>
+     <p style="color: orangered;padding: 10px;">Black friday exclusive</p>
+     <div class="cart">
+      <button class="add" style="margin-left: 10px;"><a onclick="fun('watches/fastrack.jpg,1500')">Add to cart</a></button>
+        <button class="add" style="margin-right: 10px;">Buy Now</button>
+     </div>
+    </div>
+    <div class="card">
+        <img src="travelbag.jpg" alt="image" ><br><h5 style="padding: 10px;">Travel Bag Combo</h5>
+        <p style="color: orangered;padding: 10px;">Flat 20% off*</p>
+        <div class="cart">
+         <button class="add" style="margin-left: 10px;"><a onclick="fun('watches/fastrack.jpg,1500')">Add to cart</a></button>
+           <button class="add" style="margin-right: 10px;">Buy Now</button>
+        </div>
+       </div>
+       <div class="card">
+        <img src="chain.jpg" alt="image" ><br><h5 style="padding: 10px;">Swarovski Pendant</h5>
+        <p style="color: orangered;padding: 10px;">Buy 2, get one flat 50%</p>
+        <div class="cart">
+         <button class="add" style="margin-left: 10px;"><a onclick="fun('watches/fastrack.jpg,1500')">Add to cart</a></button>
+           <button class="add" style="margin-right: 10px;">Buy Now</button>
+        </div>
+       </div>
+      
+ </div><br><br>
+ <div class="slider1">
+    <div class="card">
+        <img src="nike.jpg" alt="image" ><br><h5 style="padding: 10px;">Nike Shoes</h5>
+        <p style="color: orangered;padding: 10px;">Flat 20% off*</p>
+        <div class="cart">
+         <button class="add" style="margin-left: 10px;"><a onclick="fun('watches/fastrack.jpg,1500')">Add to cart</a></button>
+           <button class="add" style="margin-right: 10px;">Buy Now</button>
+        </div>
+       </div>
+       <div class="card">
+        <img src="bag.jpg" alt="image" ><br><h5 style="padding: 10px;">Gucci leather bags</h5>
+        <p style="color: orangered;padding: 10px;">Flat 20% off*</p>
+        <div class="cart">
+         <button class="add" style="margin-left: 10px;"><a onclick="fun('watches/fastrack.jpg,1500')">Add to cart</a></button>
+           <button class="add" style="margin-right: 10px;">Buy Now</button>
+        </div>
+       </div>
+       <div class="card">
+        <img src="headphone.jpg" alt="image" ><br><h5 style="padding: 10px;">Headphones</h5>
+        <p style="color: orangered;padding: 10px;">Flat 20% off*</p>
+        <div class="cart">
+         <button class="add" style="margin-left: 10px;"><a onclick="fun('watches/fastrack.jpg,1500')">Add to cart</a></button>
+           <button class="add" style="margin-right: 20px;">Buy Now</button>
+        </div>
+       </div>
+ </div>
+</div>
+</body>
+</html>

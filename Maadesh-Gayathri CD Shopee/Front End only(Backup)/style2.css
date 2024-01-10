@@ -1,0 +1,143 @@
+body{
+    
+    padding: 30px 30px 30px 30px;
+}
+
+.container {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+  
+  .topnav {
+    overflow: hidden;
+    
+  }
+  
+  .topnav a {
+    float: right;
+    color: black;
+    text-align: center;
+    padding: 3pxpx 4px;
+    text-decoration: none;
+    font-size: 17px;
+    margin-right: 20px;
+    margin-top: 10px;
+  }
+  
+  .topnav a:hover {
+    border-bottom: 2px solid blue;
+  }
+ 
+  .topnav a.split {
+    float: left;
+  }
+  img{
+    height: 50px;
+    width: 50px;
+  }
+  .active{
+    border-bottom: 2px solid blue;
+  }
+  .topnav1 {
+    
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid rgb(0, 217, 255);
+    text-align: center;
+    width: 94%;
+  }
+  .search-container input[type=text]{
+    height: 20px;
+    width: 300px;
+    padding: 15px;
+    border: 1px solid whitesmoke;
+  }
+.sort .select{
+    height: 50px;
+    width: 300px;
+    padding: 15px;
+    border: 1px solid whitesmoke;
+   }
+.select .products{
+    height: 50px;
+    width: 300px;
+    padding: 15px;
+    border: 1px solid whitesmoke;
+   }
+   
+.slider{
+  height: 30%;
+  width: 98%;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+}
+.slider1{
+    height: 30%;
+    width: 60%;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+  }
+.card{
+  border: none;
+  box-shadow: 5px 4px 8px;
+  width: 250px;
+  height: 250px;
+  margin-right: 20px;
+  border-radius: 15px;
+  background-color: white;
+  transition: .2s;
+
+}
+.card:hover{
+  box-shadow: 8px 3px 10px rgb(182, 180, 180);
+}
+.cart{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0px;
+}
+.add{
+    background-color: orangered;
+    color: white;
+    height: 40px;
+    width: 90px;
+    border: none;
+    border-radius: 10px;
+}
+.add:hover{
+    background-color: white;
+    color: orangered;
+    border: 1px solid orangered;
+}
+.popup-background{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 999;
+
+}
+.popup{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    width: 400px;
+    z-index: 1000;
+}
+.popup-content{
+    position: relative;
+}

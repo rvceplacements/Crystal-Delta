@@ -1,0 +1,220 @@
+body{
+    background-color: aqua;
+    padding: 30px 30px 30px 30px;
+}
+
+.container {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+  
+  .topnav {
+    overflow: hidden;
+    
+  }
+  #card-btn{
+    height:25px;
+    width:25px;
+    border: 2px solid blue;
+    border-radius: 50%;
+    font-weight: bold;
+}
+  
+  .topnav a {
+    float: right;
+    color: black;
+    text-align: center;
+    padding: 3pxpx 4px;
+    text-decoration: none;
+    font-size: 17px;
+    margin-right: 20px;
+    margin-top: 10px;
+  }
+  
+  .topnav a:hover {
+    border-bottom: 2px solid blue;
+  }
+ 
+  .topnav a.split {
+    float: left;
+  }
+  img{
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+  }
+  .active{
+    border-bottom: 2px solid blue;
+  }
+  .topnav1 {
+    
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid rgb(0, 217, 255);
+    text-align: center;
+    width: 94%;
+  }
+  .search-container input[type=text]{
+    height: 20px;
+    width: 300px;
+    padding: 15px;
+    border: 1px solid whitesmoke;
+  }
+.sort .select{
+    height: 50px;
+    width: 300px;
+    padding: 15px;
+    border: 1px solid whitesmoke;
+   }
+.select .products{
+    height: 50px;
+    width: 300px;
+    padding: 15px;
+    border: 1px solid whitesmoke;
+   }
+   
+.slider{
+  height: 30%;
+  width: 98%;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+}
+.slider1{
+    height: 30%;
+    width: 60%;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+  }
+.card{
+  border: none;
+  box-shadow: 5px 4px 8px;
+  width: 250px;
+  height: 350px;
+  margin-right: 20px;
+  border-radius: 20px;
+  background-color: white;
+  transition: .2s;
+
+}
+.card:hover{
+  box-shadow: 8px 3px 10px rgb(182, 180, 180);
+}
+.cart{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0px;
+}
+.add{
+    background-color: orangered;
+    color: white;
+    height: 40px;
+    width: 90px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.add:hover{
+    background-color: white;
+    color: orangered;
+    border: 1px solid orangered;
+}
+.popup-background {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Adjust the alpha value for the background color */
+  z-index: 999; /* Higher z-index to cover other elements */
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 800px;
+  z-index: 1000; /* Higher z-index than background */
+}
+
+.popup-content {
+  position: relative;
+}
+
+.close {
+  position: fixed;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+
+.close:hover {
+  background-color: red;
+  color: white;
+}
+img{
+  height: 150px;
+  width: 100%;
+}
+.split{
+   height: 40px;
+   width: 50px;
+}
+.popData{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}.image{
+  height: 60px;
+  width: 70px;
+}
+.total{
+  float: right;
+  margin-left: 10px;
+}
+#button{
+  background-color: orangered;
+    color: white;
+    height: 40px;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 50px;
+}
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+.popupOverlay {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
