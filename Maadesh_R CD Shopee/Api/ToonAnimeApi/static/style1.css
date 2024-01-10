@@ -1,0 +1,114 @@
+body{
+    background-color: aqua;
+    padding: 30px 30px 30px 30px;
+}
+
+.container {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+  
+  .topnav {
+    overflow: hidden;
+    
+  }
+  
+  .topnav a {
+    float: right;
+    color: black;
+    text-align: center;
+    padding: 3pxpx 4px;
+    text-decoration: none;
+    font-size: 17px;
+    margin-right: 20px;
+    margin-top: 10px;
+  }
+  
+  .topnav a:hover {
+    border-bottom: 2px solid blue;
+  }
+ 
+  .topnav a.split {
+    float: left;
+  }
+  img{
+    height: 50px;
+    width: 50px;
+  }
+  .shop{
+    margin-left: 100px;
+    width: 50%;
+  }
+  .body{
+    display: flex;
+    justify-content: space-between;
+  }
+  .buttons{
+    display: flex;
+    justify-content: space-between;
+  }
+  .buttons .button{
+    background-color: orangered;
+    color: white;
+    height: 30px;
+    width: 140px;
+    text-align: center;
+    border: 1px solid orangered;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .buttons #button{
+    background-color: orangered;
+    color: white;
+    height: 30px;
+    width: 140px;
+    text-align: center;
+    border: 1px solid orangered;
+    border-radius: 5px;
+    margin-right: 200px;
+    cursor: pointer;
+  }
+  .slider{
+    height: 50%;
+    width: 100%;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+  }
+  .card{
+    border: none;
+    box-shadow: 5px 4px 8px;
+    width: 550px;
+    height: 200px;
+    margin-right: 20px;
+    border-radius: 15px;
+    background-color: white;
+    transition: .2s;
+
+  }
+  .card:hover{
+    box-shadow: 8px 3px 10px rgb(182, 180, 180);
+  }
+  .footer{
+    display: flex;
+    justify-content: space-between;
+
+  }
+  .brand{
+    height: 200px;
+    width: 200px;
+    background-color: whitesmoke;
+    
+  }
+  .last{
+    margin-left: 100px;
+  }
+  .active{
+    border-bottom: 2px solid blue;
+    background-color: #fff;
+    color: black;
+  }
+  
