@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Banking</title> 
+    <link rel="icon" type="image/x-icon" href="logo1.png">
+
+    <link rel="stylesheet" href="style1.css">
+    <script src="log.js"></script>
+ </head>
+ <script>
+  function confirm(){
+    alert("Do you Want To Logout ?");
+  }
+ </script>
+<body>
+  <!--Navbar Section-->
+    <div class="nav">
+      <img src="logo1.png" alt="Logo"><br>
+        <button type="button" class="box"><a href="login.html" onclick="confirm()">Logout</a></button>
+    </div><br><br>
+  <h1 style="color: aliceblue;">Greeting <span id="use" style="color: rgb(0, 153, 255);"></span></h1>
+
+  <!--Popup Box Alert-->
+
+   <div class="popup-background" id="popupBackground"></div>
+    <div class="popup" id="popup">
+      <div class="popup-content">
+        <h4>Statement:</h4>
+        <span class="close" id="closePopup">&times;</span>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>CustomerID</th>
+              <th>Credit/Deposit</th>
+              <th>Amount</th>
+              <th>Balance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+            <td>10/01/2022</td>
+            <td class="ACname"></td>
+            <td>Credit</td>
+            <td style="color: green;">+12,000</td>
+            <td>32,000</td>
+          </tr>
+          </tbody>
+          <tbody>
+            <tr>
+            <td>7/01/2022</td>
+            <td class="ACname"></td>
+            <td>Deposit</td>
+            <td style="color: red;">-12,000</td>
+            <td>20,000</td>
+          </tr>
+          </tbody>
+          <tbody>
+            <tr>
+            <td>5/01/2022</td>
+            <td class="ACname"></td>
+            <td>Credit</td>
+            <td style="color: green;">+12,000</td>
+            <td>32,000</td>
+          </tr>
+          <tr>
+            <td>25/12/2021</td>
+            <td class="ACname"></td>
+            <td>Deposit</td>
+            <td style="color: red;">-12,000</td>
+            <td>44,000</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  <!---Popup Box Close-->
+  <br>
+  <!---Transaction popup-->
+  <div class="pbox">
+    
+</div>
+<div id="popup-box" class="modal">
+    <div class="contentpop">
+       <img src="click.png"  class="click">
+        <b>
+            <p>Amount Transfered Succesfully</p>
+        </b>
+        <a href="#"
+           class="box-close">
+            ×
+        </a>
+    </div>
+</div>
+<br><!--Account Details-->
+<div class="Account-details">
+ <div class="tab">
+    <button class="tablinks" onmouseover="openCity(event, 'London')">Account Summary</button>
+    <button class="tablinks" onmouseover="openCity(event, 'Paris')">Transfer fund</button>
+  </div>
+   <div id="London" class="tabcontent">
+    <h4 style="color:white;">Account Summary</h4><br>
+      <div class="dropdown">
+        <button class="dropbtn">Saving Account<span style="margin-left: 600px;">Closing balance:<span style="color: blue;">20,500.50</span></span></button>
+         <div class="dropdown-content">
+          <div class="a">Account Number: 786543092<br>Name: <span class="ACname"></span></div>
+          <div class="a">Branch: Ashok Nagar<br>IFSC code: CDBL0009</div>
+          <button class="box1" id="button">View statement</button>
+        </div>
+      </div>
+      <br>
+      <div class="dropdown">
+        <button class="dropbtn">Current Account<span style="margin-left: 600px;">Closing balance:<span style="color: blue;">16,543.50</span></span></button>
+        <div class="dropdown-content">
+          <div class="a">Account Number: 786543092<br>Name: <span class="ACname"></span></div>
+          <div class="a">Branch: Ashok Nagar<br>IFSC code: CDBL0009</div>
+          <button class="box1" id="button1">View statement</button>
+        </div>
+      </div>
+      <br>
+      <div class="dropdown">
+        <button class="dropbtn">Credit Account<span style="margin-left: 600px;">Closing balance:<span style="color: blue;">18,900.50</span></span></button>
+        <div class="dropdown-content">
+          <div class="a">Card No: XXXX XXXX XXXX 1235<br>Name: <span class="ACname"></span></div>
+          <div class="a">Type: Visa</div>
+          <button class="box1" id="button2">View statement</button>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <!---Transaction Details-->
+   
+    <div id="Paris" class="tabcontent">
+      <h3 style="color: white">Transfer Fund</h3><br>
+      <label for="Account" style="color: white">Choose an Account</label>
+      <select id="Account">
+        <option label="--Select an Account--">--Select an Account--</option>
+        <option label="Saving Account" style="color: white">Saving Account</option>
+        <option label="Current Account" style="color: white">Current Account</option>
+      </select><br><br>
+      <label for="Account" style="color: white">Beneficiary Account</label>
+      <select id="BeneficiaryAccount" style="margin-left: 305px;" >
+         <option label="--Select an Account--">--Select a Beneficiary--</option>
+         <option label="In Person">In Person</option>
+         <option label="Business">Business</option>
+      </select><br><br>
+        <label for="Account" style="color: white">Account in Rupees</label>
+        <input type="number" id="rupees"><br><br>
+        <label for="Account" style="color: white">Remarks</label>
+        <textarea type="text" id="textarea"></textarea><br><br> 
+        <button  id="reset" onclick="resetForm()">Reset</button>   
+       <!-- <input type="reset" id="reset" value="Reset"> -->
+      <a href="#popup-box">  <button type="submit" id="send" value="Send" class="send">
+        send
+    </button></a>
+      </div>
+    </div>
+<!--End of the Code-->
+</body>
+</html>

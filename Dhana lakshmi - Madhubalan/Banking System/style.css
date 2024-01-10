@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0px;
+}
+body{
+   /* background-image: url(back1.gif);*/
+   background-image: url(bank.jpg);
+}
+h1{
+    width: 350px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+img{
+    height: 50px;
+    width: 50px;
+    padding-top: 20px;
+    margin-left: 30px;
+}
+.nav{
+    height: 90px;
+    width: 100%;
+    background-color: #0c789998;
+    box-shadow: 20px 10px 50px rgb(115, 239, 243);
+  }
+.container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 500px;
+    background-image: url(bank.jpg);
+}
+
+.form{
+   height: 400px;
+   width: 450px;
+   padding: 20px;
+   background-color: rgba(255, 248, 248, 0.164);
+   color: white;
+   margin-top: 50px;
+   border-radius: 5px;
+   margin-right: 100px;
+   animation: slideMe 1s ease-in;
+   border: 1px solid white;
+}
+.form:hover{
+   box-shadow: 0px 0px 50px 0px rgb(59, 156, 247);
+}
+.text{
+    height: 350px;
+    width: 400px;
+    padding: 20px;
+    margin-top: 100px;
+    margin-left: 250px;
+    border-right: 5px solid orangered;
+   animation: slide 1.2s ease-in;
+
+ }
+ @keyframes slide{
+    0%{
+        transform: skewX(0deg) translateX(-500px);
+        opacity: 0;
+    }
+    70%{
+        transform: translateX(0px);
+        opacity: 0.5;
+    }
+    72%{
+        transform: skewX(0deg);
+    }
+    100%{
+        transform: skew(0deg);
+    }
+}
+ @keyframes slideMe{
+        0%{
+            transform: skewY(0deg) translateY(-500px);
+            opacity: 0;
+        }
+        72%{
+            transform: skewY(0deg);
+            opacity: 0.3;
+        }
+        100%{
+            transform: skew(0deg);
+        }
+ }
+input[type=text],input[type=password]{
+    height: 35px;
+    width: 95%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: rgba(102, 99, 99, 0.144);
+    color: white;
+    margin-top: 3px;
+}
+input[type=text],input[type=password]:hover{
+    border: none;
+    border-bottom: 2px solid #afa9a9;
+    
+}
+.btn{
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(0, 102, 255);
+  color: whitesmoke;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 102, 255);
+}
+
+.btn:hover{
+    background-color: rgb(0, 153, 255);
+}
+#error{
+    color: red;
+}
+#error1{
+    color: red;
+}
