@@ -1,0 +1,138 @@
+
+
+:root{
+
+    --primary:red;
+    --secondary:#76b5c5;
+}
+
+tn{
+    background-color: var(--primary);
+    color: white;
+}
+
+}
+.btn:focus{
+    border: none;
+    box-shadow: none;
+}
+
+}
+.btn1{
+    background-color: white;
+    color: black;
+}
+.btn1:focus{
+    border: none;
+    box-shadow: none;
+}
+h1{
+    font-weight: bold;
+    font-size: 3.5rem;
+}
+.bs{
+    color: var(--primary);
+}
+.pro{
+    color: var(--secondary);
+}
+.homecon{
+    width: 400px;
+}
+p{
+    font-weight: bold;
+}
+
+.form-wrapper{
+   
+     width: 360px;
+    /* height: 350px; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center;  */
+}
+label{
+    color: black;
+    font-weight: 500;
+    
+}
+
+.inp{
+    border: 1px solid black; 
+    box-shadow: none;
+  
+}
+.inp:focus{
+    box-shadow: none;
+}
+
+}
+a{
+    text-decoration: none;
+    color: rgb(185, 176, 176);
+    text-align: center;
+    
+    font-size: 13px;
+}
+.tab{
+    display: flex;
+    height: 50px;
+   flex-direction: row;
+   justify-content: space-between;
+}
+.tab>p{
+     font-size: 13px;
+    font-weight: bold;
+}
+.card-wrapper{
+    width: 250px; 
+    margin-bottom:50px;
+}
+.card-body>p{
+    font-size: 13px;
+    font-weight: 400;
+    color: rgb(150, 148, 148);
+}
+.whishlist{
+    display: flex;
+    flex-direction: row;
+   justify-content: space-between;
+}
+.img-wrapper{
+    border: 1px solid rgb(223, 215, 215);
+    margin: 10px;
+}
+.explore-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.img1{
+    width: 230px;
+    height: 230px;
+    position: absolute;
+    z-index: 1002;
+    margin-top: 60px;
+    /* margin-right: 180px; */
+}
+.img2{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: 1001;
+    /* left: 250px; */
+    margin-left: 150px;
+    margin-top: 50px;
+}
+.img3{
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    z-index: 1000;
+}
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
