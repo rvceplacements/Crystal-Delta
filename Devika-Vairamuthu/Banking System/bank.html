@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Application</title>
+    <style>
+      
+      body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image:linear-gradient(blue,skyblue);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+           
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button.reset {
+            background-color: #f44336;
+        }
+
+        button.reset:hover {
+            background-color: #d32f2f;
+        }
+       
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #container {
+            margin: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .account-details {
+            width: 30%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+.sam{
+    
+            background-color: #d30808c5;
+            color: #fff;
+            padding:6px 10px;
+            text-align:right;
+            margin-bottom: auto;
+            text-decoration: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-left: 90%;
+}
+        .view-statement {
+            display: block;
+            background-color: #4caf50;
+            color: #fff;
+            padding: 8px 12px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+     
+
+        nav {
+            background-color: #eee;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .container {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            /* background-color: #4CAF50; */
+            color: black;
+        }
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 25%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+        .disp{
+            color: red;
+            padding-left: 10%;
+         
+        }
+        .data{
+          
+            padding-left: 10%;
+        }
+        div{
+            background-color: #f4f4f4;
+        }
+        .show{
+            text-align:center;
+            color:  rgb(12, 228, 66);
+            margin-top:5%;
+          
+        }
+    </style>
+</head>
+<body>
+    
+ <h2 id="successMessage" class="show" > </h2>
+       <a href="login.html" class="sam" onclick="fun()">Logout </a>
+    <nav>
+        <a href="#" onclick="showAccountSummary()">Account Summary
+           </a>
+        
+    </nav>
+    <div>
+    <nav>
+        <a href="#" onclick="showTransferForm()">Transfer Funds</a>
+    </nav>
+</div>
+
+    <div class="container" id="accountSummary">
+      <!-- Account Summary content will be displayed here  -->
+     </div>
+    <div class="container" id="transferForm" style="display: none;">
+        <h3>Transfer Funds</h3>
+        <table>
+            <tr>
+                <th>Choose an Element</th>
+                <td>
+                    <select id="chooseElement">
+                        <!-- Add options as needed -->
+                        <option value="option1">Savings</option>
+                        <option value="option2">Current</option>
+                        
+                        <option value="option3">Credit Card</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Beneficiary Account</th>
+                <td>
+                    <select id="beneficiaryAccount">
+                        <!-- Add options as needed -->
+                        <option value="account1">In person</option>
+                        <option value="account2">Business Account</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Amount in Rupees</th>
+                <td><input id="amount" type="number"></td>
+            </tr>
+            <tr>
+                <th>Note</th>
+                <td><textarea id="remarks" rows="4"></textarea></td>
+            </tr>
+        </table>
+        
+        <button onclick="sendMoney()">Send</button>
+        <button class="reset" onclick="resetForm()">Reset</button>
+       
+        <!-- <div id="successMessage" style="display: none; color: green; margin-top: 10px;"></div> -->
+    </div>
+    <script>
+
+ function fun(){
+    alert("Logout Successfully")
+ }
+
+          function send() {
+        // Add your send logic here
+        alert('Sending funds!');
+    }
+         function resetForm() {
+        document.getElementById("chooseElement").selectedIndex = 0;
+        document.getElementById("beneficiaryAccount").selectedIndex = 0;
+        document.getElementById("amount").value = "";
+        document.getElementById("remarks").value = "";
+    }
+        function showAccountSummary() {
+            // Dummy account data
+            const accounts = {
+                savings: {
+                    accountNumber: '23330123253412',
+                    balance: 5000
+                },
+                current: {
+                    accountNumber: '12303538341384',
+                    balance: 10000
+                },
+                credit: {
+                    accountNumber: '1111222233334444',
+                    balance: -2000
+                }
+            };
+
+            const accountSummaryDiv = document.getElementById('accountSummary');
+            accountSummaryDiv.innerHTML = `
+                <h2>Account Summary</h2>
+                <div id="container">
+        <div class="account-details" id="savingAccount">
+            <h2>Savings Account</h2>
+            <p>Account Number: <span id="savingAccNumber">123456789</span></p>
+            <p>Balance: $<span id="savingBalance">5000</span></p>
+            <a href="savings.html" class="view-statement" onclick="viewStatement('Savings')">View Statement</a>
+        </div>
+
+        <div class="account-details" id="currentAccount">
+            <h2>Current Account</h2>
+            <p>Account Number: <span id="currentAccNumber">987654321</span></p>
+            <p>Balance: $<span id="currentBalance">10000</span></p>
+            <a href="nila.html" class="view-statement" onclick="viewStatement('Current')">View Statement</a>
+        </div>
+
+        <div class="account-details" id="creditAccount">
+            <h2>Credit Account</h2>
+            <p>Account Number: <span id="creditAccNumber">567890123</span></p>
+            <p>Balance: -$<span id="creditBalance">2000</span></p>
+            <a href="nila.html" class="view-statement" onclick="viewStatement('Credit')">View Statement</a>
+        </div>
+    </div>
+            `;
+            
+            const transferFormDiv = document.getElementById('transferForm');
+            accountSummaryDiv.style.display = 'block';
+            
+            transferFormDiv.style.display = 'none';
+        
+        }
+        function viewStatement(accountType) {
+            // Replace this alert with actual code to display the transaction history
+            alert(`viewing statements for ${accountType} account.`);
+         
+        }
+        function showTransferForm() {
+            const accountSummaryDiv = document.getElementById('accountSummary');
+            const transferFormDiv = document.getElementById('transferForm');
+
+            accountSummaryDiv.style.display = 'none';
+            transferFormDiv.style.display = 'block';
+        }
+
+        function sendMoney() {
+            const successMessageDiv = document.getElementById('successMessage');
+            successMessageDiv.innerHTML = 'Payment successful!';
+            successMessageDiv.style.display = 'block';
+        
+
+            // Additional logic for handling the money transfer (not implemented in this example)
+
+            return false; // Prevent the form from submitting and refreshing the page
+        }
+    </script>
+</body>
+</html>
