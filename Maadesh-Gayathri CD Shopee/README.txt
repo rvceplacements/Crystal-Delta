@@ -2,6 +2,10 @@ Project Details: This project contains
 
 !!!!!"IMPORTANT NOTICE"!!!!!
 
+Do not close the command prompt while visiting website!!!(That's the server for that website)
+
+I have added "FrontEnd Only" folder for backup...Main project is in "Api" folder
+
 Backend language: Python Django
 
 Django settings for Api project.
@@ -29,7 +33,7 @@ Running command:Open cmd at the location that contains 'manage.py' file and run 
 If you diddn't url use this url :http://127.0.0.1:8000/
 
 
-Then 
+Do not close the command prompt while visiting website!!!(That's the server for that website)
 
 <----------------------------------------------------------------------------------------------------->
 

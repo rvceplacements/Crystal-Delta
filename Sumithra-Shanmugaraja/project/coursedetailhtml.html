@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses details</title>
+    <link rel="stylesheet" href="course.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    #dur{
+        display:flex;
+    }
+    #btn{
+        position: absolute;
+        bottom: 50px;
+        left: 25%;
+        background-color: rgb(145, 145, 243);
+        height: 40px;
+        width: 100px;
+        font-weight: bold;
+    }
+    p{
+       text-align: justify;
+    }
+</style>
+<body>
+    <h1>HTML</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" >
+                <div class="col-md-6">
+                    <p id="pt_le"> Start:2.1.2024 <br>End:20.3.2024</p>
+                </div>
+                <div class="col-md-6">
+                    <p id="pt_ri"> Duration:19hours<br> Instructors:Shyam</p>
+                </div>
+                <p><br>
+                    
+A building blocks of HTML pages. With HTML constructs, images and other objects such as interactive forms may be embedded into the rendered page.<br> HTML provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes, and other items. HTML elements are delineated by tags, written using angle brackets.<br> Tags such as img and input directly introduce content into the page. Other tags such as and surround and provide information about document text and may include sub-element tags. <br> Browsers do not display the HTML tags but use them to interpret the content of the page.
+
+HTML can embed programs written in a scripting language such as JavaScript, which affects the behavior and content of web pages. The inclusion of CSS defines the look and layout of content.<br> The World Wide Web Consortium (W3C), former maintainer of the HTML and current maintainer of the CSS standards, has encouraged the use of CSS over explicit presentational HTML since 1997.[2] A form of HTML, known as HTML5, is used to display video and audio, primarily using the canvas element, together with JavaScript.
+
+
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img src="courses.jpg" alt="" height="150%" width= "100%">
+            </div>
+        </div>
+    </div>
+
+    <input type="submit" value="Enroll Now" id="btn" onclick=window.location.href="course1.html">
+</body>

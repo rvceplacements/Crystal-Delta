@@ -2,6 +2,10 @@ Project Details: This project contains
 
 !!!!!"IMPORTANT NOTICE"!!!!!
 
+Do not close the command prompt while visiting website!!!(That's the server for that website)
+
+I have added "FrontEnd Only" folder for backup...Main project is in "Api" folder!!!
+
 Backend language: Python Django
 
 Django settings for Api project.
